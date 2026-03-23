@@ -6,7 +6,7 @@
     <td style="padding-left: 30px;">
       <h1 style="color: #0037ac; margin-top: 0;">Kiromaru</h1>
       <p style="font-size: 16px; line-height: 1.6; color: #333;">
-        Kiromaru is a sleek and modern anime and movie database web application. It allows users to browse top titles, view detailed synopses, watch trailers, and read the latest news in a beautifully designed, dark-themed responsive interface.
+        Kiromaru is a website created for all anime fans. Here you can find short summaries of both popular and rare anime series, as well as anime movies. The site also features the latest news from the anime industry, including updates on upcoming seasons and new releases.
       </p>
       <p style="font-size: 16px;">
         <strong style="color: #0037ac;">Live :</strong><br>
