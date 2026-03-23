@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Anime — Kiromaru</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="stylesheet" href="../css/anime.css">
+  <link rel="icon" href="../images/Kiromaru.png" type="image/x-icon">
+</head>
+<body>
+  <header>
+    <div class="left-header">
+      <img src="../images/Kiromaru.png" alt="Logo" class="logo">
+      <div class="logo-text">Kiromaru</div>
+      <nav>
+        <a href="../index.html">Home</a>
+        <a href="anime.html">Anime</a>
+        <a href="films.html">Movies</a>
+        <a href="news.html">News</a>
+      </nav>
+    </div>
+    <div class="search-container">
+      <i class="fas fa-search search-icon"></i>
+      <input type="text" class="search-input" placeholder="Search anime..." id="searchInput">
+    </div>
+  </header>
+
+  <div class="search-error" id="searchError">Anime not found. Try another query.</div>
+
+  <div class="main-content">
+    <div class="section-nav">
+      <div class="nav-dot active" data-section="best" data-title="Top picks for you"></div>
+      <div class="nav-dot" data-section="popular" data-title="Popular"></div>
+      <div class="nav-dot" data-section="isekai" data-title="Isekai"></div>
+      <div class="nav-dot" data-section="romance" data-title="Romance"></div>
+      <div class="nav-dot" data-section="comedy" data-title="Comedy"></div>
+    </div>
+
+    <section class="section" id="best">
+      <h2>Top picks for you</h2>
+      <div class="carousel-container">
+        <button class="scroll-btn scroll-left" onclick="scrollCarousel('carousel1', -1)">❮</button>
+        <div class="card-carousel" id="carousel1">
+          <div class="card" onclick="openAnimeDetails('Attack on Titan', 'https://m.media-amazon.com/images/I/61t9ie31jgL._AC_UF894,1000_QL80_.jpg', 'anime')"><img src="https://m.media-amazon.com/images/I/61t9ie31jgL._AC_UF894,1000_QL80_.jpg"><p>Attack on Titan</p></div>
+          <div class="card" onclick="openAnimeDetails('Demon Slayer', 'https://m.media-amazon.com/images/M/MV5BMWU1OGEwNmQtNGM3MS00YTYyLThmYmMtN2FjYzQzNzNmNTE0XkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg', 'anime')"><img src="https://m.media-amazon.com/images/M/MV5BMWU1OGEwNmQtNGM3MS00YTYyLThmYmMtN2FjYzQzNzNmNTE0XkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg"><p>Demon Slayer</p></div>
+          <div class="card" onclick="openAnimeDetails('Dr. Stone', 'https://m.media-amazon.com/images/M/MV5BYzZkYjM1MWMtNTY3Mi00MTMzLTlhNmQtN2ExZjFkYzdjZmFjXkEyXkFqcGc@._V1_.jpg', 'anime')"><img src="https://m.media-amazon.com/images/M/MV5BYzZkYjM1MWMtNTY3Mi00MTMzLTlhNmQtN2ExZjFkYzdjZmFjXkEyXkFqcGc@._V1_.jpg"><p>Dr. Stone</p></div>
+          <div class="card" onclick="openAnimeDetails('Death Note', 'https://static.wikia.nocookie.net/listofdeaths/images/8/8c/Death_Note_Poster.jpg/revision/latest?cb=20200709085505', 'anime')"><img src="https://static.wikia.nocookie.net/listofdeaths/images/8/8c/Death_Note_Poster.jpg/revision/latest?cb=20200709085505"><p>Death Note</p></div>
+          <div class="card" onclick="openAnimeDetails('Hunter x Hunter', 'https://comichub.blob.core.windows.net/high/8607f145-4b79-4a9c-8816-d384bb633598.jpg', 'anime')"><img src="https://comichub.blob.core.windows.net/high/8607f145-4b79-4a9c-8816-d384bb633598.jpg"><p>Hunter x Hunter</p></div>
+          <div class="card" onclick="openAnimeDetails('The Apothecary Diaries', 'https://media.themoviedb.org/t/p/w500/e3ojpANrFnmJCyeBNTinYwyBCIN.jpg', 'anime')"><img src="https://media.themoviedb.org/t/p/w500/e3ojpANrFnmJCyeBNTinYwyBCIN.jpg"><p>The Apothecary Diaries</p></div>
+          <div class="card" onclick="openAnimeDetails('One Piece', 'https://m.media-amazon.com/images/I/81zwj54srRL._AC_UF894,1000_QL80_.jpg', 'anime')"><img src="https://m.media-amazon.com/images/I/81zwj54srRL._AC_UF894,1000_QL80_.jpg"><p>One Piece</p></div>
+          <div class="card" onclick="openAnimeDetails('Fire Force', 'https://xonomax.com/cdn/shop/files/750185.jpg?v=1721568659', 'anime')"><img src="https://xonomax.com/cdn/shop/files/750185.jpg?v=1721568659"><p>Fire Force</p></div>
+          <div class="card" onclick="openAnimeDetails('Solo Leveling', 'https://i5.walmartimages.com/seo/LNASI-Solo-Leveling-Anime-Poster-12x18Inch-30x46cm-Unframed_b651d18a-26c6-492e-b24b-21532cf99f4c.91d18e48662bf96bd1c9049164d9f5cb.jpeg', 'anime')"><img src="https://i5.walmartimages.com/seo/LNASI-Solo-Leveling-Anime-Poster-12x18Inch-30x46cm-Unframed_b651d18a-26c6-492e-b24b-21532cf99f4c.91d18e48662bf96bd1c9049164d9f5cb.jpeg"><p>Solo Leveling</p></div>
+          <div class="card" onclick="openAnimeDetails('Jujutsu Kaisen', 'https://i.ebayimg.com/images/g/TH8AAOSwNcxlINOt/s-l1200.jpg', 'anime')"><img src="https://i.ebayimg.com/images/g/TH8AAOSwNcxlINOt/s-l1200.jpg"><p>Jujutsu Kaisen</p></div>
+        </div>
+        <button class="scroll-btn scroll-right" onclick="scrollCarousel('carousel1', 1)">❯</button>
+      </div>
+    </section>
+
+    <section class="section" id="popular">
+      <h2>Popular</h2>
+      <div class="carousel-container">
+        <button class="scroll-btn scroll-left" onclick="scrollCarousel('carousel2', -1)">❮</button>
+        <div class="card-carousel" id="carousel2">
+          <div class="card" onclick="openAnimeDetails('Solo Leveling', 'https://i5.walmartimages.com/seo/LNASI-Solo-Leveling-Anime-Poster-12x18Inch-30x46cm-Unframed_b651d18a-26c6-492e-b24b-21532cf99f4c.91d18e48662bf96bd1c9049164d9f5cb.jpeg', 'anime')"><img src="https://i5.walmartimages.com/seo/LNASI-Solo-Leveling-Anime-Poster-12x18Inch-30x46cm-Unframed_b651d18a-26c6-492e-b24b-21532cf99f4c.91d18e48662bf96bd1c9049164d9f5cb.jpeg"><p>Solo Leveling</p></div>
+          <div class="card" onclick="openAnimeDetails('Mushoku Tensei', 'https://m.media-amazon.com/images/M/MV5BYWQwNjk3MDItNDAxMS00YTQ2LWEyNDctMGYyZTE5OGQxNGQ1XkEyXkFqcGc@._V1_.jpg', 'anime')"><img src="https://m.media-amazon.com/images/M/MV5BYWQwNjk3MDItNDAxMS00YTQ2LWEyNDctMGYyZTE5OGQxNGQ1XkEyXkFqcGc@._V1_.jpg"><p>Mushoku Tensei</p></div>
+          <div class="card" onclick="openAnimeDetails('Chainsaw Man', 'https://m.media-amazon.com/images/I/71DOGFSR6bL._UF894,1000_QL80_.jpg', 'anime')"><img src="https://m.media-amazon.com/images/I/71DOGFSR6bL._UF894,1000_QL80_.jpg"><p>Chainsaw Man</p></div>
+          <div class="card" onclick="openAnimeDetails('Attack on Titan', 'https://m.media-amazon.com/images/I/61t9ie31jgL._AC_UF894,1000_QL80_.jpg', 'anime')"><img src="https://m.media-amazon.com/images/I/61t9ie31jgL._AC_UF894,1000_QL80_.jpg"><p>Attack on Titan</p></div>
+          <div class="card" onclick="openAnimeDetails('Re:Zero - Starting Life in Another World', 'https://m.media-amazon.com/images/M/MV5BOTIyNGIzY2EtYjMyZS00Y2M0LWE4MTktNmQ3Y2IwZTBhNWE2XkEyXkFqcGc@._V1_.jpg', 'anime')"><img src="https://m.media-amazon.com/images/M/MV5BOTIyNGIzY2EtYjMyZS00Y2M0LWE4MTktNmQ3Y2IwZTBhNWE2XkEyXkFqcGc@._V1_.jpg"><p>Re:Zero - Starting Life in Another World</p></div>
+          <div class="card" onclick="openAnimeDetails('Demon Slayer', 'https://m.media-amazon.com/images/M/MV5BMWU1OGEwNmQtNGM3MS00YTYyLThmYmMtN2FjYzQzNzNmNTE0XkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg', 'anime')"><img src="https://m.media-amazon.com/images/M/MV5BMWU1OGEwNmQtNGM3MS00YTYyLThmYmMtN2FjYzQzNzNmNTE0XkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg"><p>Demon Slayer</p></div>
+          <div class="card" onclick="openAnimeDetails('Kaiju No. 8', 'https://m.media-amazon.com/images/I/71iNxd5PuIL._AC_UF894,1000_QL80_.jpg', 'anime')"><img src="https://m.media-amazon.com/images/I/71iNxd5PuIL._AC_UF894,1000_QL80_.jpg"><p>Kaiju No. 8</p></div>
+          <div class="card" onclick="openAnimeDetails('Frieren: Beyond Journey\'s End', 'https://m.media-amazon.com/images/I/71wCsabGOQL._AC_UF894,1000_QL80_.jpg', 'anime')"><img src="https://m.media-amazon.com/images/I/71wCsabGOQL._AC_UF894,1000_QL80_.jpg"><p>Frieren: Beyond Journey's End</p></div>
+          <div class="card" onclick="openAnimeDetails('Vinland Saga', 'https://image.tmdb.org/t/p/original/vUHlpA5c1NXkds59reY3HMb4Abs.jpg', 'anime')"><img src="https://image.tmdb.org/t/p/original/vUHlpA5c1NXkds59reY3HMb4Abs.jpg"><p>Vinland Saga</p></div>
+          <div class="card" onclick="openAnimeDetails('One Punch Man', 'https://static.posters.cz/image/1300/86559.jpg', 'anime')"><img src="https://static.posters.cz/image/1300/86559.jpg"><p>One Punch Man</p></div>
+        </div>
+        <button class="scroll-btn scroll-right" onclick="scrollCarousel('carousel2', 1)">❯</button>
+      </div>
+    </section>
+
+    <section class="section" id="isekai">
+      <h2>Isekai</h2>
+      <div class="carousel-container">
+        <button class="scroll-btn scroll-left" onclick="scrollCarousel('carousel3', -1)">❮</button>
+        <div class="card-carousel" id="carousel3">
+          <div class="card" onclick="openAnimeDetails('KonoSuba', 'https://m.media-amazon.com/images/I/71usoDBW-cL.jpg', 'anime')"><img src="https://m.media-amazon.com/images/I/71usoDBW-cL.jpg"><p>KonoSuba</p></div>
+          <div class="card" onclick="openAnimeDetails('Mushoku Tensei', 'https://m.media-amazon.com/images/M/MV5BYWQwNjk3MDItNDAxMS00YTQ2LWEyNDctMGYyZTE5OGQxNGQ1XkEyXkFqcGc@._V1_.jpg', 'anime')"><img src="https://m.media-amazon.com/images/M/MV5BYWQwNjk3MDItNDAxMS00YTQ2LWEyNDctMGYyZTE5OGQxNGQ1XkEyXkFqcGc@._V1_.jpg"><p>Mushoku Tensei</p></div>
+          <div class="card" onclick="openAnimeDetails('That Time I Got Reincarnated as a Slime', 'https://m.media-amazon.com/images/M/MV5BM2IwMDM4MDgtZWU2Zi00YjA2LWJhOTItNGUzMWM1N2E4ZTk3XkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg', 'anime')"><img src="https://m.media-amazon.com/images/M/MV5BM2IwMDM4MDgtZWU2Zi00YjA2LWJhOTItNGUzMWM1N2E4ZTk3XkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg"><p>That Time I Got Reincarnated as a Slime</p></div>
+          <div class="card" onclick="openAnimeDetails('Re:Zero - Starting Life in Another World', 'https://m.media-amazon.com/images/M/MV5BOTIyNGIzY2EtYjMyZS00Y2M0LWE4MTktNmQ3Y2IwZTBhNWE2XkEyXkFqcGc@._V1_.jpg', 'anime')"><img src="https://m.media-amazon.com/images/M/MV5BOTIyNGIzY2EtYjMyZS00Y2M0LWE4MTktNmQ3Y2IwZTBhNWE2XkEyXkFqcGc@._V1_.jpg"><p>Re:Zero - Starting Life in Another World</p></div>
+          <div class="card" onclick="openAnimeDetails('The Eminence in Shadow', 'https://i.ebayimg.com/images/g/Cj8AAOSwjX9kQk9Z/s-l1200.jpg', 'anime')"><img src="https://i.ebayimg.com/images/g/Cj8AAOSwjX9kQk9Z/s-l1200.jpg"><p>The Eminence in Shadow</p></div>
+          <div class="card" onclick="openAnimeDetails('The Saga of Tanya the Evil', 'https://image.tmdb.org/t/p/original/gpdrbXq1tGJxW9ebqMQHhg9VhaD.jpg', 'anime')"><img src="https://image.tmdb.org/t/p/original/gpdrbXq1tGJxW9ebqMQHhg9VhaD.jpg"><p>The Saga of Tanya the Evil</p></div>
+          <div class="card" onclick="openAnimeDetails('Sword Art Online', 'https://i5.walmartimages.com/seo/Sword-Art-Online-Key-Art-1-Wall-Poster-14-725-x-22-375-Framed_6d784db4-0256-4e5c-b219-69b543c5e4db.9caff8672efd1be25b57b3da9b876396.jpeg', 'anime')"><img src="https://i5.walmartimages.com/seo/Sword-Art-Online-Key-Art-1-Wall-Poster-14-725-x-22-375-Framed_6d784db4-0256-4e5c-b219-69b543c5e4db.9caff8672efd1be25b57b3da9b876396.jpeg"><p>Sword Art Online</p></div>
+          <div class="card" onclick="openAnimeDetails('I Got a Cheat Skill in Another World', 'https://m.media-amazon.com/images/M/MV5BZWExYjA3OTAtYzliNC00MWMzLWI1NmYtYWY0MDRhNGIyN2IwXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg', 'anime')"><img src="https://m.media-amazon.com/images/M/MV5BZWExYjA3OTAtYzliNC00MWMzLWI1NmYtYWY0MDRhNGIyN2IwXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg"><p>I Got a Cheat Skill in Another World</p></div>
+          <div class="card" onclick="openAnimeDetails('Uncle from Another World', 'https://m.media-amazon.com/images/M/MV5BNjY4MmVhOTItOTU4Mi00N2UxLWFhMGYtNmJkNmIzYzFhYzkxXkEyXkFqcGc@._V1_.jpg', 'anime')"><img src="https://m.media-amazon.com/images/M/MV5BNjY4MmVhOTItOTU4Mi00N2UxLWFhMGYtNmJkNmIzYzFhYzkxXkEyXkFqcGc@._V1_.jpg"><p>Uncle from Another World</p></div>
+        </div>
+        <button class="scroll-btn scroll-right" onclick="scrollCarousel('carousel3', 1)">❯</button>
+      </div>
+    </section>
+
+    <section class="section" id="romance">
+      <h2>Romance</h2>
+      <div class="carousel-container">
+        <button class="scroll-btn scroll-left" onclick="scrollCarousel('carousel4', -1)">❮</button>
+        <div class="card-carousel" id="carousel4">
+          <div class="card" onclick="openAnimeDetails('Toradora!', 'https://m.media-amazon.com/images/I/71iRZ2PFfGL.jpg', 'anime')"><img src="https://m.media-amazon.com/images/I/71iRZ2PFfGL.jpg"><p>Toradora!</p></div>
+          <div class="card" onclick="openAnimeDetails('Horimiya', 'https://i.pinimg.com/736x/86/62/4b/86624b5cec4c124d661792faad4b4e1b.jpg', 'anime')"><img src="https://i.pinimg.com/736x/86/62/4b/86624b5cec4c124d661792faad4b4e1b.jpg"><p>Horimiya</p></div>
+          <div class="card" onclick="openAnimeDetails('Kimi ni Todoke', 'https://postersbase.com/cdn/shop/files/1-Posters-From-Me-to-You_-Kimi-ni-Todoke-Posters-Base.png?v=1730395199&width=1080', 'anime')"><img src="https://postersbase.com/cdn/shop/files/1-Posters-From-Me-to-You_-Kimi-ni-Todoke-Posters-Base.png?v=1730395199&width=1080"><p>Kimi ni Todoke</p></div>
+          <div class="card" onclick="openAnimeDetails('Your Lie in April', 'https://rukminim2.flixcart.com/image/480/480/kvzkosw0/poster/1/a/j/medium-your-lie-in-april-anime-matte-finish-poster-ppoint6744-original-imag8rk4k2kayjfs.jpeg?q=90', 'anime')"><img src="https://rukminim2.flixcart.com/image/480/480/kvzkosw0/poster/1/a/j/medium-your-lie-in-april-anime-matte-finish-poster-ppoint6744-original-imag8rk4k2kayjfs.jpeg?q=90"><p>Your Lie in April</p></div>
+          <div class="card" onclick="openAnimeDetails('Tsukigakirei', 'https://m.media-amazon.com/images/M/MV5BNjBhOGVkN2MtMzQwZC00ZTI1LTlmMzgtN2RhZDVkNWE0ZDFiXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg', 'anime')"><img src="https://m.media-amazon.com/images/M/MV5BNjBhOGVkN2MtMzQwZC00ZTI1LTlmMzgtN2RhZDVkNWE0ZDFiXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg"><p>Tsukigakirei</p></div>
+          <div class="card" onclick="openAnimeDetails('Blue Spring Ride', 'https://images.prom.ua/4256350522_w400_h400_blue-spring-ride.jpg', 'anime')"><img src="https://images.prom.ua/4256350522_w400_h400_blue-spring-ride.jpg"><p>Blue Spring Ride</p></div>
+          <div class="card" onclick="openAnimeDetails('Kaguya-sama: Love Is War', 'https://m.media-amazon.com/images/M/MV5BMTM1ZWViNWMtZWY2ZC00YmYyLTk1ZGEtMzRjOWI2YTM1OTI3XkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg', 'anime')"><img src="https://m.media-amazon.com/images/M/MV5BMTM1ZWViNWMtZWY2ZC00YmYyLTk1ZGEtMzRjOWI2YTM1OTI3XkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg"><p>Kaguya-sama: Love Is War</p></div>
+          <div class="card" onclick="openAnimeDetails('Oregairu', 'https://cdn11.bigcommerce.com/s-64ni4d05jw/images/stencil/1280x1280/products/16184/16596/Poster_Propaganda_-_Oregairu_-_Characters_-_LL0754__37612.1596552610.jpg?c=1', 'anime')"><img src="https://cdn11.bigcommerce.com/s-64ni4d05jw/images/stencil/1280x1280/products/16184/16596/Poster_Propaganda_-_Oregairu_-_Characters_-_LL0754__37612.1596552610.jpg?c=1"><p>Oregairu</p></div>
+          <div class="card" onclick="openAnimeDetails('High School DxD', 'https://www.kinonews.ru/insimgs/2017/poster/poster72710_1.jpg', 'anime')"><img src="https://www.kinonews.ru/insimgs/2017/poster/poster72710_1.jpg"><p>High School DxD</p></div>
+          <div class="card" onclick="openAnimeDetails('The Angel Next Door Spoils Me Rotten', 'https://m.media-amazon.com/images/M/MV5BNDI1OWVjNGYtZmE0NC00Zjk3LWI5ZWItODYxYWU2ZGQ1OTJmXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg', 'anime')"><img src="https://m.media-amazon.com/images/M/MV5BNDI1OWVjNGYtZmE0NC00Zjk3LWI5ZWItODYxYWU2ZGQ1OTJmXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg"><p>The Angel Next Door</p></div>
+        </div>
+        <button class="scroll-btn scroll-right" onclick="scrollCarousel('carousel4', 1)">❯</button>
+      </div>
+    </section>
+
+    <section class="section" id="comedy">
+      <h2>Comedy</h2>
+      <div class="carousel-container">
+        <button class="scroll-btn scroll-left" onclick="scrollCarousel('carousel5', -1)">❮</button>
+        <div class="card-carousel" id="carousel5">
+          <div class="card" onclick="openAnimeDetails('Grand Blue', 'https://i.ebayimg.com/images/g/qtUAAOSw-ldhvCtX/s-l400.jpg', 'anime')"><img src="https://i.ebayimg.com/images/g/qtUAAOSw-ldhvCtX/s-l400.jpg"><p>Grand Blue</p></div>
+          <div class="card" onclick="openAnimeDetails('Gintama', 'https://i.ebayimg.com/images/g/R0YAAOSwqhpkQksq/s-l1200.jpg', 'anime')"><img src="https://i.ebayimg.com/images/g/R0YAAOSwqhpkQksq/s-l1200.jpg"><p>Gintama</p></div>
+          <div class="card" onclick="openAnimeDetails('The Disastrous Life of Saiki K.', 'https://i.pinimg.com/474x/48/95/80/48958087822dca9bd57c39733647dc2c.jpg', 'anime')"><img src="https://i.pinimg.com/474x/48/95/80/48958087822dca9bd57c39733647dc2c.jpg"><p>The Disastrous Life of Saiki K.</p></div>
+          <div class="card" onclick="openAnimeDetails('Daily Lives of High School Boys', 'https://m.media-amazon.com/images/M/MV5BMDVhOTNmMzgtNWNhNy00OGEwLWI4ODEtM2IxZTFjYTQ4ZTU4XkEyXkFqcGc@._V1_.jpg', 'anime')"><img src="https://m.media-amazon.com/images/M/MV5BMDVhOTNmMzgtNWNhNy00OGEwLWI4ODEtM2IxZTFjYTQ4ZTU4XkEyXkFqcGc@._V1_.jpg"><p>Daily Lives of High School Boys</p></div>
+          <div class="card" onclick="openAnimeDetails('Azumanga Daioh', 'https://m.media-amazon.com/images/I/611YcTIGjyL._AC_SL1000__.jpg', 'anime')"><img src="https://m.media-amazon.com/images/I/611YcTIGjyL._AC_SL1000__.jpg"><p>Azumanga Daioh</p></div>
+          <div class="card" onclick="openAnimeDetails('Barakamon', 'https://m.media-amazon.com/images/I/61wTj8BLSEL._AC_UF894,1000_QL80_.jpg', 'anime')"><img src="https://m.media-amazon.com/images/I/61wTj8BLSEL._AC_UF894,1000_QL80_.jpg"><p>Barakamon</p></div>
+          <div class="card" onclick="openAnimeDetails('Great Teacher Onizuka', 'https://media.animationdigitalnetwork.com/images/show/e3fef915-f55b-4d62-8038-3a1a0520eaa5/portrait-with-logo.width=630,height=900,quality=80', 'anime')"><img src="https://media.animationdigitalnetwork.com/images/show/e3fef915-f55b-4d62-8038-3a1a0520eaa5/portrait-with-logo.width=630,height=900,quality=80"><p>Great Teacher Onizuka</p></div>
+          <div class="card" onclick="openAnimeDetails('The Devil is a Part-Timer!', 'https://m.media-amazon.com/images/M/MV5BODdjMWIyYjQtNzI4ZC00ZjA1LWJmYzMtYTA1ZjFiNTMxZWI5XkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg', 'anime')"><img src="https://m.media-amazon.com/images/M/MV5BODdjMWIyYjQtNzI4ZC00ZjA1LWJmYzMtYTA1ZjFiNTMxZWI5XkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg"><p>The Devil is a Part-Timer!</p></div>
+        </div>
+        <button class="scroll-btn scroll-right" onclick="scrollCarousel('carousel5', 1)">❯</button>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="footer-container">
+        <div class="footer-col footer-about">
+          <div class="footer-logo-wrapper">
+            <img src="../images/Kiromaru.png" alt="Kiromaru Logo" class="footer-logo">
+            <span class="footer-brand">Kiromaru</span>
+          </div>
+          <p class="footer-description">
+            Your guide in the anime world. We collect brief descriptions of the best titles so you can quickly choose what to watch tonight.
+          </p>
+        </div>
+  
+        <div class="footer-col footer-nav">
+          <h4 class="footer-title">Navigation</h4>
+          <ul class="footer-links">
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="anime.html">Anime</a></li>
+            <li><a href="films.html">Movies</a></li>
+            <li><a href="news.html">News</a></li>
+          </ul>
+        </div>
+  
+        <div class="footer-col footer-contact">
+          <h4 class="footer-title">Contacts</h4>
+          <div class="footer-contact-item">
+            <i class="fas fa-envelope" style="color: #0037ac;"></i>
+            <a href="https://mail.google.com/mail/?view=cm&fs=1&to=kiromaru.official@gmail.com" target="_blank">kiromaru.official@gmail.com</a>
+          </div>
+          <div class="footer-social">
+            <a href="https://vk.com/kiromaru" target="_blank" class="social-link"><i class="fab fa-vk" style="color: #0077FF;"></i></a>
+            <a href="https://t.me/kiromaru" target="_blank" class="social-link"><i class="fab fa-telegram-plane" style="color: #26A5E4;"></i></a>
+            <a href="https://discord.com/kiromaru" target="_blank" class="social-link"><i class="fab fa-discord" style="color: #5865F2;"></i></a>
+            <a href="https://youtube.com/kiromaru" target="_blank" class="social-link"><i class="fab fa-youtube" style="color: #FF0000;"></i></a>
+          </div>
+        </div>
+      </div>
+  
+      <div class="footer-bottom">
+        <p>© 2026 Kiromaru | Made with ❤️ for anime fans</p>
+      </div>
+    </footer>
+  </div>
+
+  <script src="../js/animeData.js" defer></script>
+  <script src="../js/filmData.js" defer></script>
+  <script src="../js/search.js" defer></script>
+  <script src="../js/anime.js" defer></script>
+</body>
+</html>

@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Movies — Kiromaru</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+  <link rel="stylesheet" href="../css/films.css">
+  <link rel="icon" href="../images/KiromaruLogo.png" type="image/x-icon">
+</head>
+<body>
+  <div class="background-container">
+    <div class="site-background active" id="bg1" style="background-image: url('https://gamemag.ru/images/cache/News/News172777/e041a9b2cb-2_1390x600.jpg')"></div>
+    <div class="site-background" id="bg2" style="background-image: url('https://sun9-54.userapi.com/impg/xlsPFHkFzujJIzpQkEqsiiCmVb7CY3SfvFObRw/d3nMjtQ9KPE.jpg?size=604x327&quality=96&sign=85bfce55eea6ec3effb9ab514803f427&type=album')"></div>
+    <div class="site-background" id="bg3" style="background-image: url('https://99px.ru/sstorage/53/2014/01/tmb_93842_8236.jpg')"></div>
+  </div>
+
+  <header>
+    <div class="left-header">
+      <img src="../images/Kiromaru.png" alt="Logo" class="logo">
+      <div class="logo-text">Kiromaru</div>
+      <nav>
+        <a href="../index.html">Home</a>
+        <a href="anime.html">Anime</a>
+        <a href="films.html">Movies</a>
+        <a href="news.html">News</a>
+      </nav>
+    </div>
+    <div class="search-container">
+      <i class="fas fa-search search-icon"></i>
+      <input type="text" class="search-input" placeholder="Search anime..." id="searchInput">
+    </div>
+  </header>
+
+  <div class="search-error" id="searchError">Anime not found. Try another query.</div>
+
+  <div class="main-content">
+    <section class="film-section" id="film1">
+      <div class="film-item">
+        <div class="film-image-container">
+          <img src="https://ir.ozone.ru/s3/multimedia-s/c1000/6386270596.jpg" alt="Your Name" class="film-image" onclick="openContentDetails('Your Name', 'https://ir.ozone.ru/s3/multimedia-s/c1000/6386270596.jpg', 'film')">
+        </div>
+        <div class="film-text-container">
+          <img src="https://upload.wikimedia.org/wikipedia/commons/8/80/Your_name_movie_logo.svg" alt="Your Name" class="film-title-img">
+          <p class="film-description">Tokyo boy Taki and a provincial girl named Mitsuha discover a mysterious connection that allows them to swap bodies in their dreams and experience each other’s lives in completely different worlds. At first confused, they gradually adapt and begin helping one another through daily challenges, forming a unique bond across distance. However, the connection suddenly disappears, and Taki becomes determined to find Mitsuha no matter what, driven by a feeling he cannot forget.</p>
+          <div class="rating">
+            <div class="stars">★★★★☆</div>
+            <div class="rating-text">| Average rating: 8.6/10</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="film-section" id="film2">
+      <div class="film-item reverse">
+        <div class="film-image-container">
+          <img src="https://myhotposters.com/cdn/shop/files/mL7004_grande.jpg?v=1748531370" alt="The Boy and the Heron" class="film-image" onclick="openContentDetails('The Boy and the Heron', 'https://myhotposters.com/cdn/shop/files/mL7004_grande.jpg?v=1748531370', 'film')">
+        </div>
+        <div class="film-text-container">
+          <img src="https://image.tmdb.org/t/p/original/moewcz8QXWpFoQ7MTTvWJ1A21oE.png" alt="The Boy and the Heron" class="film-title-img">
+          <p class="film-description">Three years after the Pacific War begins, Mahito loses his mother in a tragic fire in Tokyo, and a year later his father remarries her sister and moves them to a quiet countryside estate. With his father often away working at a defense factory, Mahito feels isolated, spending time with his pregnant stepmother and elderly servants. Soon, a strange gray heron begins bothering him, eventually leading him toward a mysterious tower and promising a way to see his mother again.</p>
+          <div class="rating">
+            <div class="stars">★★★★☆</div>
+            <div class="rating-text">| Average rating: 8.5/10</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="film-section" id="film3">
+      <div class="film-item">
+        <div class="film-image-container">
+          <img src="https://m.media-amazon.com/images/I/61ON14PVzoL.jpg" alt="Spirited Away" class="film-image" onclick="openContentDetails('Spirited Away', 'https://m.media-amazon.com/images/I/61ON14PVzoL.jpg', 'film')">
+        </div>
+        <div class="film-text-container">
+          <img src="https://wallpapers.com/images/hd/spirited-away-logo-graphic-oxnljzvulth7qi2v.jpg" alt="Spirited Away" class="film-title-img">
+          <p class="film-description">Chihiro is moving to a new home with her parents when they accidentally enter a strange abandoned town filled with delicious food and eerie silence all around them. After her parents greedily eat the food and transform into pigs, Chihiro is left alone in a magical world ruled by a powerful witch named Yubaba. Surrounded by spirits and mysterious creatures, she must find courage, work hard, and discover a way to save her parents and return home safely.</p>
+          <div class="rating">
+            <div class="stars">★★★★☆</div>
+            <div class="rating-text">| Average rating: 8.6/10</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="section-nav">
+      <div class="nav-dot active" data-section="film1" data-title="Your Name"></div>
+      <div class="nav-dot" data-section="film2" data-title="The Boy and the Heron"></div>
+      <div class="nav-dot" data-section="film3" data-title="Spirited Away"></div>
+    </div>
+
+    <section class="section">
+      <h2>Trending Now</h2>
+      <div class="carousel-container">
+        <button class="scroll-btn scroll-left" onclick="scrollCarousel('carousel1', -1)">❮</button>
+        <div class="card-carousel" id="carousel1">
+          <div class="card" onclick="openContentDetails('Howl\'s Moving Castle', 'https://i.ebayimg.com/images/g/h9oAAOSw0BJgHam1/s-l1200.jpg', 'film')"><img src="https://i.ebayimg.com/images/g/h9oAAOSw0BJgHam1/s-l1200.jpg"><p>Howl's Moving Castle</p></div>
+          <div class="card" onclick="openContentDetails('My Neighbor Totoro', 'https://www.tallengestore.com/cdn/shop/files/MyNeighborTotoro-StudioGhibli-JapanaeseAnimatedMoviePoster_grande.jpg?v=1690726355', 'film')"><img src="https://www.tallengestore.com/cdn/shop/files/MyNeighborTotoro-StudioGhibli-JapanaeseAnimatedMoviePoster_grande.jpg?v=1690726355"><p>My Neighbor Totoro</p></div>
+          <div class="card" onclick="openContentDetails('The Boy and the Beast', 'https://m.media-amazon.com/images/S/pv-target-images/b99b127a92c8dd7ff3f01b23fdca78f00358fa14d4a823352273da308df5aaf1.jpg', 'film')"><img src="https://m.media-amazon.com/images/S/pv-target-images/b99b127a92c8dd7ff3f01b23fdca78f00358fa14d4a823352273da308df5aaf1.jpg"><p>The Boy and the Beast</p></div>
+          <div class="card" onclick="openContentDetails('Princess Mononoke', 'https://www.tallengestore.com/cdn/shop/products/PrincessMononoke-StudioGhibli-JapanaeseAnimatedMoviePoster_a1fded11-57ad-43f5-b374-d2fc5154e41a.jpg?v=1691816762', 'film')"><img src="https://www.tallengestore.com/cdn/shop/products/PrincessMononoke-StudioGhibli-JapanaeseAnimatedMoviePoster_a1fded11-57ad-43f5-b374-d2fc5154e41a.jpg?v=1691816762"><p>Princess Mononoke</p></div>
+          <div class="card" onclick="openContentDetails('Weathering with You', 'https://m.media-amazon.com/images/M/MV5BMmJiYWI4ZjktMzgyZS00MjBiLThmOTYtZWJmOTUzOTFkMTFiXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg', 'film')"><img src="https://m.media-amazon.com/images/M/MV5BMmJiYWI4ZjktMzgyZS00MjBiLThmOTYtZWJmOTUzOTFkMTFiXkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg"><p>Weathering with You</p></div>
+          <div class="card" onclick="openContentDetails('The Garden of Words', 'https://m.media-amazon.com/images/M/MV5BYjdiMDdlMDItOGM4Ny00YmE4LTk0MTEtMGRhM2Y4OWZkZDZkXkEyXkFqcGc@._V1_.jpg', 'film')"><img src="https://m.media-amazon.com/images/M/MV5BYjdiMDdlMDItOGM4Ny00YmE4LTk0MTEtMGRhM2Y4OWZkZDZkXkEyXkFqcGc@._V1_.jpg"><p>The Garden of Words</p></div>
+          <div class="card" onclick="openContentDetails('The Wind Rises', 'https://www.logobook.kz/make_nimage.php?uid=12481071', 'film')"><img src="https://www.logobook.kz/make_nimage.php?uid=12481071"><p>The Wind Rises</p></div>
+          <div class="card" onclick="openContentDetails('Whisper of the Heart', 'https://m.media-amazon.com/images/I/91K9DUwnZVL._AC_UF894,1000_QL80_.jpg', 'film')"><img src="https://m.media-amazon.com/images/I/91K9DUwnZVL._AC_UF894,1000_QL80_.jpg"><p>Whisper of the Heart</p></div>
+          <div class="card" onclick="openContentDetails('A Silent Voice', 'https://rukminim2.flixcart.com/image/480/480/kwwfte80/poster/0/r/p/medium-a-silent-voice-movie-matte-finish-poster-am7474-original-imag9h6zbpzaxngh.jpeg?q=90', 'film')"><img src="https://rukminim2.flixcart.com/image/480/480/kwwfte80/poster/0/r/p/medium-a-silent-voice-movie-matte-finish-poster-am7474-original-imag9h6zbpzaxngh.jpeg?q=90"><p>A Silent Voice</p></div>
+          <div class="card" onclick="openContentDetails('5 Centimeters per Second', 'https://resizing.flixster.com/ALS2Djmyte1w2LK9PSMqX9EH2ug=/ems.cHJkLWVtcy1hc3NldHMvbW92aWVzL2U5OTc4MzE3LWJhNTctNDRkNy04ZjE0LTIyNmM4MmU0ZTU2OC5qcGc=', 'film')"><img src="https://resizing.flixster.com/ALS2Djmyte1w2LK9PSMqX9EH2ug=/ems.cHJkLWVtcy1hc3NldHMvbW92aWVzL2U5OTc4MzE3LWJhNTctNDRkNy04ZjE0LTIyNmM4MmU0ZTU2OC5qcGc="><p>5 Centimeters per Second</p></div>
+        </div>
+        <button class="scroll-btn scroll-right" onclick="scrollCarousel('carousel1', 1)">❯</button>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>Top Rated</h2>
+      <div class="carousel-container">
+        <button class="scroll-btn scroll-left" onclick="scrollCarousel('carousel2', -1)">❮</button>
+        <div class="card-carousel" id="carousel2">
+          <div class="card" onclick="openContentDetails('Attack on Titan: The Last Attack', 'https://i.redd.it/yne99eegmdje1.jpeg', 'film')"><img src="https://i.redd.it/yne99eegmdje1.jpeg"><p>Attack on Titan: The Last Attack</p></div>
+          <div class="card" onclick="openContentDetails('The Lord of the Rings: The War of the Rohirrim', 'https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcThxzvBUOvOS0tgyww6qYId3i_92RKk9uNnQlSQ74LnAdQtdMa1', 'film')"><img src="https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcThxzvBUOvOS0tgyww6qYId3i_92RKk9uNnQlSQ74LnAdQtdMa1"><p>The Lord of the Rings: The War of the Rohirrim</p></div>
+          <div class="card" onclick="openContentDetails('The Colors Within', 'https://m.media-amazon.com/images/M/MV5BNWYyN2NkMjgtNWYyMy00OWE4LTk5ZGQtZDZkMWJlMmEyZDFmXkEyXkFqcGc@._V1_.jpg', 'film')"><img src="https://m.media-amazon.com/images/M/MV5BNWYyN2NkMjgtNWYyMy00OWE4LTk5ZGQtZDZkMWJlMmEyZDFmXkEyXkFqcGc@._V1_.jpg"><p>The Colors Within</p></div>
+          <div class="card" onclick="openContentDetails('The Glassworker', 'https://m.media-amazon.com/images/M/MV5BNjQzZTE2YWUtZTliOC00ZmUyLWE4ZmUtMjNhZmZlMDg0NDYzXkEyXkFqcGc@._V1_.jpg', 'film')"><img src="https://m.media-amazon.com/images/M/MV5BNjQzZTE2YWUtZTliOC00ZmUyLWE4ZmUtMjNhZmZlMDg0NDYzXkEyXkFqcGc@._V1_.jpg"><p>The Glassworker</p></div>
+          <div class="card" onclick="openContentDetails('Delicious in Dungeon', 'https://m.media-amazon.com/images/I/71uqMHgYN0L._AC_UF894,1000_QL80_.jpg', 'film')"><img src="https://m.media-amazon.com/images/I/71uqMHgYN0L._AC_UF894,1000_QL80_.jpg"><p>Delicious in Dungeon</p></div>
+          <div class="card" onclick="openContentDetails('Akira', 'https://media.posterlounge.com/img/products/720000/716040/716040_poster.jpg', 'film')"><img src="https://media.posterlounge.com/img/products/720000/716040/716040_poster.jpg"><p>Akira</p></div>
+          <div class="card" onclick="openContentDetails('The Place Promised in Our Early Days', 'https://resizing.flixster.com/N42cy1vE5P766p5LTATb5095veM=/ems.cHJkLWVtcy1hc3NldHMvbW92aWVzL2UwMTdiZTMwLWUxNjAtNGM2My05MGRhLWM3MDQ1ZjkyYjJlMC5qcGc=', 'film')"><img src="https://resizing.flixster.com/N42cy1vE5P766p5LTATb5095veM=/ems.cHJkLWVtcy1hc3NldHMvbW92aWVzL2UwMTdiZTMwLWUxNjAtNGM2My05MGRhLWM3MDQ1ZjkyYjJlMC5qcGc="><p>The Place Promised in Our Early Days</p></div>
+          <div class="card" onclick="openContentDetails('Suzume', 'https://m.media-amazon.com/images/I/61XRfzUUOvL._UF1000,1000_QL80_.jpg', 'film')"><img src="https://m.media-amazon.com/images/I/61XRfzUUOvL._UF1000,1000_QL80_.jpg"><p>Suzume</p></div>
+          <div class="card" onclick="openContentDetails('Look Back', 'https://image.tmdb.org/t/p/original/1QJBTdtyH5aLrhjR3VbuxXNNnzH.jpg', 'film')"><img src="https://image.tmdb.org/t/p/original/1QJBTdtyH5aLrhjR3VbuxXNNnzH.jpg"><p>Look Back</p></div>
+          <div class="card" onclick="openContentDetails('Ride Your Wave', 'https://m.media-amazon.com/images/M/MV5BZDM5YTliZDgtZWYwZC00OWM4LWFiOTYtNDc0N2IxZjNiMjUzXkEyXkFqcGc@._V1_.jpg', 'film')"><img src="https://m.media-amazon.com/images/M/MV5BZDM5YTliZDgtZWYwZC00OWM4LWFiOTYtNDc0N2IxZjNiMjUzXkEyXkFqcGc@._V1_.jpg"><p>Ride Your Wave</p></div>
+        </div>
+        <button class="scroll-btn scroll-right" onclick="scrollCarousel('carousel2', 1)">❯</button>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <div class="footer-container">
+        <div class="footer-col footer-about">
+          <div class="footer-logo-wrapper">
+            <img src="../images/Kiromaru.png" alt="Kiromaru Logo" class="footer-logo">
+            <span class="footer-brand">Kiromaru</span>
+          </div>
+          <p class="footer-description">
+            Your guide in the anime world. We collect brief descriptions of the best titles so you can quickly choose what to watch tonight.
+          </p>
+        </div>
+  
+        <div class="footer-col footer-nav">
+          <h4 class="footer-title">Navigation</h4>
+          <ul class="footer-links">
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="anime.html">Anime</a></li>
+            <li><a href="films.html">Movies</a></li>
+            <li><a href="news.html">News</a></li>
+          </ul>
+        </div>
+  
+        <div class="footer-col footer-contact">
+          <h4 class="footer-title">Contacts</h4>
+          <div class="footer-contact-item">
+            <i class="fas fa-envelope" style="color: #0037ac;"></i>
+            <a href="https://mail.google.com/mail/?view=cm&fs=1&to=kiromaru.official@gmail.com" target="_blank">kiromaru.official@gmail.com</a>
+          </div>
+          <div class="footer-social">
+            <a href="https://vk.com/kiromaru" target="_blank" class="social-link"><i class="fab fa-vk" style="color: #0077FF;"></i></a>
+            <a href="https://t.me/kiromaru" target="_blank" class="social-link"><i class="fab fa-telegram-plane" style="color: #26A5E4;"></i></a>
+            <a href="https://discord.com/kiromaru" target="_blank" class="social-link"><i class="fab fa-discord" style="color: #5865F2;"></i></a>
+            <a href="https://youtube.com/kiromaru" target="_blank" class="social-link"><i class="fab fa-youtube" style="color: #FF0000;"></i></a>
+          </div>
+        </div>
+      </div>
+  
+      <div class="footer-bottom">
+        <p>© 2026 Kiromaru | Made with ❤️ for anime fans</p>
+      </div>
+    </footer>
+  </div>
+
+  <script src="../js/animeData.js" defer></script>
+  <script src="../js/filmData.js" defer></script>
+  <script src="../js/search.js" defer></script>
+  <script src="../js/films.js" defer></script>
+</body>
+</html>
