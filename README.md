@@ -10,8 +10,8 @@
       </p>
       <p style="font-size: 16px;">
         <strong style="color: #0037ac;">Live :</strong><br>
-        <a href="https://myltrix.github.io/Kiromaru/" target="_blank" style="color: #1e4fd0; font-weight: bold; text-decoration: none; font-size: 18px;">
-          https://myltrix.github.io/Kiromaru/
+        <a href="https://tomiraoka.github.io/Kiromaru/" target="_blank" style="color: #1e4fd0; font-weight: bold; text-decoration: none; font-size: 18px;">
+          https://tomiraoka.github.io/Kiromaru/
         </a>
       </p>
       <p style="font-size: 16px;">
